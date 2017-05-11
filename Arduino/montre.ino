@@ -68,7 +68,8 @@ void setup()  {
   pinMode(13, OUTPUT);    // Define the indicator Led PIN 13 as output
 
   // Time synchronisation request
-  setSyncProvider(requestSync);    // Set function to call when sync required
+ // setSyncProvider(requestSync);    // Set function to call when sync required
+//ne semble pas être nécéssaire
 
   // Initialisation of OLED Screen module
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // Initialize with the I2C addr 0x3C (for the 128x64)
@@ -89,7 +90,7 @@ void setup()  {
     delay(10);    // Wait for the signal
   }
   processSyncMessage();    // Call a function to react to received messages
-
+    
   tone(buzzer, 2093);    // Buzz indicating successful sync
   delay(100);
   tone(buzzer, 1568);
