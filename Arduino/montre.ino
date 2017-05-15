@@ -100,7 +100,7 @@ void (*resetFunc)(void) = 0;    // Set the pointer to the beginning in order to 
 void loop() {
   // Detect the reset signal
   int held = 0;
-  while ((digitalRead(BUTTON) == HIGH) && (held < 10)) {
+  while (digitalRead(BUTTON) == HIGH) {
     delay(100);
     held++;
   }
