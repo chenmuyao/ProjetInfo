@@ -186,6 +186,15 @@ void checkInfo() {
   String buffer = "";
   if (mySerial.available()) {
     buffer = mySerial.readString();
+      tone(buzzer, 649);       // Buzz indicating message reception
+      delay(250);
+       tone(buzzer, 698);
+       delay(250);
+       tone(buzzer, 740);
+       delay(250);
+      tone(buzzer, 784);
+       delay(500);
+      noTone(buzzer);
     
   }
 
