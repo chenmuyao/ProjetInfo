@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <!--<TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />*/
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/turnOnBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on" />
+
+        <Button
+            android:id="@+id/visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/paired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/List" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Find" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp" >
+        </ListView>
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send" />
+
+        <Button
+            android:text="Cancel"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearBtn"
+            android:layout_weight="0.35"
+            android:layout_width="wrap_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text=""
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Connection Arduino - Android"
+            android:layout_width="match_parent"
+            android:id="@+id/textView2"
+            android:gravity="center_horizontal"
+            tools:textSize="24sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:id="@+id/chatbox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:textColorLink="?attr/actionMenuTextColor" />
+
+</RelativeLayout>
